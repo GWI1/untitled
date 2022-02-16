@@ -1,4 +1,4 @@
-package les1;
+package com.company;
 
 public class Member {
         private String name;
