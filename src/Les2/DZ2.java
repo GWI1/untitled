@@ -8,11 +8,7 @@ try {
 } catch(ArrayIndexOutOfBoundsException e1){
     System.out.println("Out of bonds exception");
 }
-try {
     MyArrayDataException.arrayNotInt();
-} catch(NumberFormatException e2){
-    System.out.println("Array is not int");
-}
 
     }
 }
