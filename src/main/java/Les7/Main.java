@@ -233,9 +233,9 @@ import java.util.Scanner;
                 String jsonResponse = client.newCall(requesthttp).execute().body().string();
                 //System.out.println(jsonResponse);
                 ObjectMapper objectMapper = new ObjectMapper();
-                JsonNode country = objectMapper.readTree(String.valueOf(jsonResponse)).at("geo/object/country/name");
-                JsonNode locality = objectMapper.readTree(String.valueOf(jsonResponse)).at("geo/object/locality/name");
-                String fact = objectMapper.readTree(String.valueOf(jsonResponse)).at("fact/temp").asText();
+                JsonNode country = objectMapper.readTree(String.valueOf(jsonResponse)).at("/geo/object/country/name");
+                JsonNode locality = objectMapper.readTree(String.valueOf(jsonResponse)).at("/geo/object/locality/name");
+                String fact = objectMapper.readTree(String.valueOf(jsonResponse)).at("/fact/temp").asText();
                 System.out.println("В городе " + locality + " температура - " + fact);
             }
 
